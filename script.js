@@ -1,11 +1,3 @@
- この部分は、予めcombinations_with_scores.csvをJSONに変換し、jsoncombinations.jsonとして保存しておく必要があります。
- JSONへの変換はPythonなどで行います。
- JSONの形式例は以下の通りです
- [
-     {特効レベル1 1, 特効レベル2 2, ..., サポーター 外部特効レベル1, 難易度 甘口, 獲得数 150},
-     ...
- ]
-
 async function fetchCombinations() {
     const response = await fetch('jsoncombinations.json');
     const data = await response.json();
