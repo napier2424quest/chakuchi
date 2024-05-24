@@ -1,6 +1,7 @@
 async function fetchCombinations() {
     const response = await fetch('jsoncombinations.json');
     const data = await response.json();
+
     return data;
 }
 
@@ -12,7 +13,8 @@ async function calculateShortage() {
     document.getElementById('shortage').innerText = shortage;
 
     const combinations = await fetchCombinations();
-    const results = combinations.filter(row => parseInt(row['獲得数']) === shortage);
+    const results = combinations.filter(row => parseInt(row['獲得数']) == shortage);
+
     displayResults(results);
 }
 

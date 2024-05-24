@@ -10,5 +10,5 @@ with open(csv_file_path, newline='', encoding='shift-jis') as csvfile:
     rows = list(reader)
 
 # JSONとして保存
-with open(json_file_path, 'w', encoding='utf-8') as jsonfile:
+with open(json_file_path, 'w', encoding='shift-jis') as jsonfile:
     json.dump(rows, jsonfile, ensure_ascii=False, indent=4)
