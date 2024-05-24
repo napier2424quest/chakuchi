@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特効計算ツール</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>特効計算ツール</h1>
+    <form id="calc-form">
+        <label for="current-value">現在の数:</label>
+        <input type="number" id="current-value" name="current-value" required>
+        <br>
+        <label for="target-value">目標数:</label>
+        <input type="number" id="target-value" name="target-value" required>
+        <br>
+        <button type="button" onclick="calculateShortage()">計算</button>
+    </form>
+    <h2>不足量: <span id="shortage"></span></h2>
+    <h2>結果</h2>
+    <table id="result-table">
+        <thead>
+            <tr>
+                <th>特効レベル1</th>
+                <th>特効レベル2</th>
+                <th>特効レベル3</th>
+                <th>特効レベル4</th>
+                <th>特効レベル5</th>
+                <th>特効レベル6</th>
+                <th>サポーター</th>
+                <th>難易度</th>
+                <th>獲得数</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
